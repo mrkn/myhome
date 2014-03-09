@@ -81,7 +81,7 @@ rbenv rehash
 
 # Homesick
 homesick clone mrkn/myhome
-homesick symlink myhome
+homesick symlink mrkn/myhome
 
 # brew bundle
 brew bundle
