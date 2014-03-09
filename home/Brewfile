@@ -1,0 +1,63 @@
+tap phinze/homebrew-cask || :
+tap homebrew/versions || :
+tap homebrew/science || :
+tap caskroom/versions || :
+tap caskroom/mrkn_casks || :
+update || :
+
+install brew-cask || :
+install lv || :
+install ag || :
+install git || :
+install tig || :
+install hub || :
+install csshx || :
+install autossh || :
+install tree || :
+install tmux || :
+install reattach-to-user-namespae || :
+install xz || :
+
+install haskell-platform || :
+install elixir || :
+install r || :
+
+cask install keyremap4macbook || :
+cask install aquaskk || :
+cask install showyedge || :
+cask install iterm2-beta || :
+cask install google-chrome-dev || :
+cask install macvim-kaoriya || :
+cask install alfred || :
+cask install bartender || :
+cask install divvy || :
+cask install hipchat || :
+cask install dash || :
+cask install firefox || :
+cask install virtualbox || :
+cask install vagrant || :
+cask install java || :
+cask install rstudio || :
+cask install android-studio || :
+cask install cyberduck || :
+cask install gpgtools || :
+cask install omnigraffle || :
+cask install send-to-kindle || :
+cask install sequel-pro || :
+cask install flip4mac || :
+cask install mactex || :
+cask install istat-menus || :
+cask install insomnia-x || :
+cask install pharo || :
+cask install onepassword || :
+cask install bathyscaphe || :
+cask install vmware-fusion || :
+cask install vlc || :
+cask install calibre || :
+cask install anki || :
+cask install airdisplay || :
+cask install adobe-reader || :
+cask install soundflower || :
+cask install dropbox || :
+cask install emacs || :
+cask install skype || :
