@@ -60,7 +60,8 @@ make ${MAKE_OPTS} \
   debugflags="-ggdb3"
 make install
 popd
-export RBENV_VERSION=${ruby_version}
+rbenv global ${ruby_version}
+rbenv rehash
 
 # Install gems
 gem install \
