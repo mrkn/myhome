@@ -63,6 +63,10 @@ popd
 rbenv global ${ruby_version}
 rbenv rehash
 
+# Updating gem
+gem update --system
+rbenv rehash
+
 # Install gems
 gem install \
   bundler \
