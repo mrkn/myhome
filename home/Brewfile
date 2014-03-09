@@ -74,3 +74,5 @@ cask install emacs || :
 cask install vmware-fusion || :
 cask install virtualbox || :
 cask install vagrant || :
+install docker || :
+install boot2docker || :
