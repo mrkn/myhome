@@ -1,0 +1,32 @@
+[user]
+	name = Kenta Murata
+	email = mrkn@mrkn.jp
+
+[core]
+	editor = vim
+
+[color]
+	ui = true
+
+[merge]
+	ff = false
+
+[alias]
+	a = add
+	ass = add
+	ci = commit
+	co = checkout
+	cb = checkout -b
+	dcn = diff --cached --name-only
+	f = fetch
+	lg = log --oneline --decorate --graph
+	rb = rebase
+	rbc = rebase --continue
+	ri = rebase -i
+	sb = status -sb
+	st = stash
+	sh = !bash -l
+[github "github.cookpad.com"]
+	user = kenta-murata
+[push]
+	default = simple
