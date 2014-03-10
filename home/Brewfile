@@ -27,7 +27,6 @@ cask install aquaskk || :
 cask install showyedge || :
 cask install alfred || :
 cask install bartender || :
-cask install divvy || :
 cask install iterm2-beta || :
 cask install macvim-kaoriya || :
 cask install dash || :
