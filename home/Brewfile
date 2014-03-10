@@ -4,7 +4,7 @@ tap phinze/homebrew-cask || :
 tap homebrew/versions || :
 tap homebrew/science || :
 tap caskroom/versions || :
-tap caskroom/mrkn_casks || :
+tap mrkn/mrkn_casks || :
 update || :
 
 # Basic packages
