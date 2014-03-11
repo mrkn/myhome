@@ -25,6 +25,8 @@ function vim() {
 alias bi='bundle install'
 alias be='bundle exec'
 
+alias l1='ls -1F'
+
 alias .ckpd='cd ~/work/ckpd/primary'
 alias .ckpd2='cd ~/work/ckpd/primary'
 
