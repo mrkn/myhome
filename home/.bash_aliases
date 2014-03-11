@@ -3,6 +3,8 @@ function vim() {
 
   if [ -x /Applications/MacVim.app/Contents/MacOS/Vim ]; then
     vim=/Applications/MacVim.app/Contents/MacOS/Vim
+  elif [ -x ~/Applications/MacVim.app/Contents/MacOS/Vim ]; then
+    vim=~/Applications/MacVim.app/Contents/MacOS/Vim
   else
     vim=vim
   fi
