@@ -67,6 +67,7 @@ cask install android-studio || :
 cask install pharo || :
 cask install sequel-pro || :
 cask install emacs || :
+cask install julia || :
 
 # VMs
 
