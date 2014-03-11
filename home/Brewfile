@@ -52,7 +52,7 @@ cask install anki || :
 cask install adobe-reader || :
 cask install skype || :
 cask install hipchat || :
-cask install quartz-clock || :
+cask install quartz-clocks || :
 
 # Development packages
 
