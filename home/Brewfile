@@ -68,6 +68,7 @@ cask install pharo || :
 cask install sequel-pro || :
 cask install emacs || :
 cask install julia || :
+cask install genymotion || :
 
 # VMs
 
