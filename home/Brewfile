@@ -19,7 +19,7 @@ install csshx || :
 install autossh || :
 install tree || :
 install tmux || :
-install reattach-to-user-namespae || :
+install reattach-to-user-namespace || :
 install xz || :
 
 cask install keyremap4macbook || :
