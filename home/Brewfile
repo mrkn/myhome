@@ -24,7 +24,7 @@ install xz || :
 
 cask install keyremap4macbook || :
 cask install aquaskk || :
-cask install showyedge || :
+cask install showy-edge || :
 cask install alfred || :
 cask install bartender || :
 cask install iterm2-beta || :
