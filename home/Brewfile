@@ -53,6 +53,7 @@ cask install adobe-reader || :
 cask install skype || :
 cask install hipchat || :
 cask install quartz-clocks || :
+cask install licecap || :
 
 # Development packages
 
