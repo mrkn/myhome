@@ -54,6 +54,7 @@ cask install skype || :
 cask install hipchat || :
 cask install quartz-clocks || :
 cask install licecap || :
+cask install flash || :
 
 # Development packages
 
