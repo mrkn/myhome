@@ -26,7 +26,7 @@ brew install valgrind
 
 # Install ruby-build
 [ -d ~/.rbenv/plugins/ruby-build ] || {
-  git clone git@github.com:sstephenson/ruby-build.git ~/.rbenv
+  git clone git@github.com:sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 }
 
 # Load rbenv
