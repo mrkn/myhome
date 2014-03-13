@@ -37,6 +37,7 @@ cask install soundflower || :
 cask install dropbox || :
 cask install airdisplay || :
 cask install gpgtools || :
+cask install dterm || :
 
 # Utilities
 
