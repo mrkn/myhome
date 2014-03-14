@@ -3,7 +3,7 @@
 	email = mrkn@mrkn.jp
 
 [core]
-	editor = vim
+	editor = ~/bin/vim
 
 [color]
 	ui = true
