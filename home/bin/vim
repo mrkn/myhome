@@ -1,0 +1,24 @@
+#! /bin/bash
+
+if [ -x /Applications/MacVim.app/Contents/MacOS/Vim ]; then
+  vim=/Applications/MacVim.app/Contents/MacOS/Vim
+elif [ -x ~/Applications/MacVim.app/Contents/MacOS/Vim ]; then
+  vim=~/Applications/MacVim.app/Contents/MacOS/Vim
+else
+  vim=`which vim`
+fi
+
+if [ $# -eq 1 ]; then
+  old_IFS="$IFS"
+  IFS=:
+  set -- $@
+  IFS="$old_IFS"
+
+  if [ -n "$2" ]; then
+    exec $vim +$2 "$1"
+  else
+    exec $vim "$1"
+  fi
+else
+  exec $vim "$@"
+fi
