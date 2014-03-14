@@ -38,6 +38,7 @@ cask install dropbox || :
 cask install airdisplay || :
 cask install gpgtools || :
 cask install dterm || :
+cask install xquartz || :
 
 # Utilities
 
