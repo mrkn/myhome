@@ -56,6 +56,7 @@ cask install hipchat || :
 cask install quartz-clocks || :
 cask install licecap || :
 cask install flash || :
+cask install trailer || :
 
 # Development packages
 
