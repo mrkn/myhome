@@ -65,6 +65,10 @@ cask install keyboard-cleaner || :
 install haskell-platform || :
 install elixir || :
 install r || :
+install postgresql || :
+install mysql || :
+install redis || :
+install mecab || :
 
 cask install firefox || :
 cask install java || :
