@@ -32,7 +32,6 @@ cask install macvim-kaoriya || :
 cask install google-chrome-dev || :
 cask install istat-menus || :
 cask install insomnia-x || :
-cask install onepassword || :
 cask install soundflower || :
 cask install dropbox || :
 cask install airdisplay || :
