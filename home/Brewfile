@@ -72,7 +72,6 @@ install mecab || :
 cask install firefox || :
 cask install java || :
 cask install rstudio || :
-cask install android-studio || :
 cask install pharo || :
 cask install sequel-pro || :
 cask install emacs || :
