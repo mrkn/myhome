@@ -70,6 +70,7 @@ NeoBundle 'itspriddle/vim-marked'
 
 NeoBundle 'info.vim'
 
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 
 filetype on
