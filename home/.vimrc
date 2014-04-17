@@ -70,6 +70,8 @@ NeoBundle 'itspriddle/vim-marked'
 
 NeoBundle 'info.vim'
 
+NeoBundle 'gregsexton/gitv'
+
 filetype on
 syntax on
 
