@@ -61,6 +61,7 @@ cask install keyboard-cleaner || :
 
 # Development packages
 
+install phantomjs || :
 install haskell-platform || :
 install elixir || :
 install r || :
