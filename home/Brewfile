@@ -1,6 +1,6 @@
 # Initialize
 
-tap phinze/homebrew-cask || :
+tap caskroom/homebrew-cask || :
 tap homebrew/versions || :
 tap homebrew/science || :
 tap caskroom/versions || :
