@@ -63,6 +63,7 @@ cask install keyboard-cleaner || :
 
 install phantomjs || :
 install haskell-platform || :
+install erlang --devel || :
 install elixir || :
 install r || :
 install postgresql || :
