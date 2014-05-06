@@ -41,6 +41,8 @@ cask install xquartz || :
 
 # Utilities
 
+install ffmpeg --with-freetype --with-libass --with-libbluray --with-libcaca --with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-openssl --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools --with-x265 || :
+
 cask install cyberduck || :
 cask install omnigraffle || :
 cask install send-to-kindle || :
@@ -58,6 +60,7 @@ cask install licecap || :
 cask install flash || :
 cask install trailer || :
 cask install keyboard-cleaner || :
+cask install handbrake || :
 
 # Development packages
 
