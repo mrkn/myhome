@@ -130,6 +130,14 @@ set directory+=~/.vim/swap//
 set directory+=~/tmp//
 set directory+=.
 
+" undofile setting
+if !isdirectory($HOME . '/.vim/undo')
+  :silent !mkdir -p ~/.vim/undo >/dev/null 2>&1
+endif
+set undodir=./.vim-undo//
+set undodir+=~/.vim/undo//
+set undodir+=.
+
 "" key bindings {{{
 nnoremap <silent> <Space>p  "+p
 nnoremap <silent> <Space>y  "+y
