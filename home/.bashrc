@@ -51,5 +51,8 @@ export PS1="$(build_primary_prompt)"
 
 source $HOME/.bash_aliases
 
+### Homebrew cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
