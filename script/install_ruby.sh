@@ -40,6 +40,7 @@ rbenv rehash
 
 # Install gems
 gem install \
+  gem-src \
   bundler \
   byebug \
   homesick \
