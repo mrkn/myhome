@@ -38,6 +38,7 @@ cask install airdisplay || :
 cask install gpgtools || :
 cask install dterm || :
 cask install xquartz || :
+cask install d-term || :
 
 # Utilities
 
@@ -62,6 +63,7 @@ cask install licecap || :
 cask install flash || :
 cask install trailer || :
 cask install keyboard-cleaner || :
+cask install delivery-status || :
 cask install handbrake || :
 
 # Development packages
