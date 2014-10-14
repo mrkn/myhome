@@ -1,96 +1,95 @@
 # Initialize
 
-tap caskroom/homebrew-cask || :
-tap homebrew/versions || :
-tap homebrew/science || :
-tap caskroom/versions || :
-tap mrkn/mrkn_casks || :
-update || :
+tap "'caskroom/homebrew-cask'"
+tap "'homebrew/versions'"
+tap "'homebrew/science'"
+tap "'caskroom/versions'"
+tap "'mrkn/mrkn_casks'"
 
 # Basic packages
 
-install brew-cask || :
-install lv || :
-install ag || :
-install git || :
-install tig || :
-install hub || :
-install csshx || :
-install autossh || :
-install tree || :
-install tmux || :
-install reattach-to-user-namespace || :
-install xz || :
+brew "brew-cask"
+brew "lv"
+brew "ag"
+brew "git"
+brew "tig"
+brew "hub"
+brew "csshx"
+brew "autossh"
+brew "tree"
+brew "tmux"
+brew "reattach-to-user-namespace"
+brew "xz"
 
-cask install keyremap4macbook || :
-cask install aquaskk || :
-cask install showy-edge || :
-cask install alfred || :
-cask install bartender || :
-cask install iterm2-beta || :
-cask install macvim-kaoriya || :
-cask install google-chrome-dev || :
-cask install istat-menus || :
-cask install insomnia-x || :
-cask install soundflower || :
-cask install dropbox || :
-cask install airdisplay || :
-cask install gpgtools || :
-cask install dterm || :
-cask install xquartz || :
-cask install d-term || :
+cask "keyremap4macbook"
+cask "aquaskk"
+cask "showy-edge"
+cask "alfred"
+cask "bartender"
+cask "iterm2-beta"
+cask "macvim-kaoriya"
+cask "google-chrome-dev"
+cask "istat-menus"
+cask "insomnia-x"
+cask "soundflower"
+cask "dropbox"
+cask "airdisplay"
+cask "gpgtools"
+cask "dterm"
+cask "xquartz"
+cask "d-term"
 
 # Utilities
 
-install elasticsearch || :
-install libdvdcss || :
-install ffmpeg --with-freetype --with-libass --with-libbluray --with-libcaca --with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-openssl --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools --with-x265 || :
+brew "elasticsearch"
+brew "libdvdcss"
+brew "ffmpeg", args: %w[with-freetype with-libass with-libbluray with-libcaca with-libquvi with-libvidstab with-libvo-aacenc with-libvorbis with-libvpx with-opencore-amr with-openjpeg with-openssl with-opus with-rtmpdump with-schroedinger with-speex with-theora with-tools with-x265]
 
-cask install cyberduck || :
-cask install omnigraffle || :
-cask install send-to-kindle || :
-cask install flip4mac || :
-cask install mactex || :
-cask install bathyscaphe || :
-cask install vlc || :
-cask install calibre || :
-cask install anki || :
-cask install adobe-reader || :
-cask install skype || :
-cask install hipchat || :
-cask install quartz-clocks || :
-cask install licecap || :
-cask install flash || :
-cask install trailer || :
-cask install keyboard-cleaner || :
-cask install delivery-status || :
-cask install handbrake || :
+cask "cyberduck"
+cask "omnigraffle"
+cask "send-to-kindle"
+cask "flip4mac"
+cask "mactex"
+cask "bathyscaphe"
+cask "vlc"
+cask "calibre"
+cask "anki"
+cask "adobe-reader"
+cask "skype"
+cask "hipchat"
+cask "quartz-clocks"
+cask "licecap"
+cask "flash"
+cask "trailer"
+cask "keyboard-cleaner"
+cask "delivery-status"
+cask "handbrake"
 
-# Development packages
+# "Development" packages
 
-install phantomjs || :
-install haskell-platform || :
-install erlang --devel || :
-install elixir || :
-install r || :
-install postgresql || :
-install mysql || :
-install redis || :
-install mecab || :
+brew "phantomjs"
+brew "haskell-platform"
+brew "erlang", args: %w[devel]
+brew "elixir"
+brew "r"
+brew "postgresql"
+brew "mysql"
+brew "redis"
+brew "mecab"
 
-cask install firefox || :
-cask install java || :
-cask install rstudio || :
-cask install pharo || :
-cask install sequel-pro || :
-cask install emacs || :
-cask install julia || :
-cask install genymotion || :
+cask "firefox"
+cask "java"
+cask "rstudio"
+cask "pharo"
+cask "sequel-pro"
+cask "emacs"
+cask "julia"
+cask "genymotion"
 
-# VMs
+# "VMs"
 
-cask install vmware-fusion || :
-cask install virtualbox || :
-cask install vagrant || :
-install docker || :
-install boot2docker || :
+cask "vmware-fusion"
+cask "virtualbox"
+cask "vagrant"
+brew "docker"
+brew "boot2docker"
