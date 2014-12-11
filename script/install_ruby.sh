@@ -48,5 +48,6 @@ gem install \
   padrino \
   pry \
   rails \
-  sinatra
+  sinatra \
+  brewdler
 rbenv rehash

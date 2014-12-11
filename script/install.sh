@@ -41,5 +41,5 @@ eval "$(rbenv init -)"
 homesick clone mrkn/myhome
 homesick symlink myhome
 
-# brew bundle
-brew bundle
+# Brewdler
+brewdle install
