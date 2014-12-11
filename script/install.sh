@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Variables
-ruby_version=2.1.1
+ruby_version=2.1.5
 install_ruby=$(dirname $0)/install_ruby.sh
 
 # Check Xcode CLI tools
