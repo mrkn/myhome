@@ -50,6 +50,19 @@ function build_primary_prompt() {
 
 export PS1="$(build_primary_prompt)"
 
+### Absolute path cd command in history
+### See http://inaz2.hatenablog.com/entry/2014/12/11/015125
+if [[ -n "$PS1" ]]; then
+  function cd() {
+    command cd "$@"
+    local s=$?
+    if [[ ($s -eq 0) && (${#FUNCNAME[*]} -eq 1) ]]; then
+      history -s cd $(printf "%q" "$PWD")
+    fi
+    return $s
+  }
+fi
+
 ### Aliases
 source $HOME/.bash_aliases
 
