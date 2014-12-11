@@ -1,3 +1,4 @@
+### Prompt
 function is_in_git_repo_p() {
   git ls-files &>/dev/null
 }
@@ -49,6 +50,7 @@ function build_primary_prompt() {
 
 export PS1="$(build_primary_prompt)"
 
+### Aliases
 source $HOME/.bash_aliases
 
 ### Homebrew cask
