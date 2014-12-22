@@ -8,7 +8,7 @@ install_ruby=$(dirname $0)/install_ruby.sh
 clang --version >/dev/null 2>&1
 
 # Install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install bootstrap packages
 brew install berkeley-db
