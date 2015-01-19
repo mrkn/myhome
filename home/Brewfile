@@ -63,7 +63,6 @@ cask "licecap"
 cask "flash"
 cask "trailer"
 cask "keyboard-cleaner"
-cask "delivery-status"
 cask "handbrake"
 cask "disk-inventory-x"
 
