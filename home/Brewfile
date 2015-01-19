@@ -4,6 +4,7 @@ tap "'caskroom/homebrew-cask'"
 tap "'homebrew/versions'"
 tap "'homebrew/science'"
 tap "'caskroom/versions'"
+tap "'aereal/homebrew-aereal_casks'"
 tap "'mrkn/mrkn_casks'"
 
 # Basic packages
