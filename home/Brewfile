@@ -10,6 +10,7 @@ tap "'mrkn/mrkn_casks'"
 # Basic packages
 
 brew "brew-cask"
+brew "gcc", args: %w[with-all-languages]
 brew "lv"
 brew "ag"
 brew "git"
@@ -42,9 +43,15 @@ cask "dterm"
 
 # Utilities
 
+brew "imagemagick"
 brew "elasticsearch"
 brew "libdvdcss"
 brew "ffmpeg", args: %w[with-freetype with-libass with-libbluray with-libcaca with-libquvi with-libvidstab with-libvo-aacenc with-libvorbis with-libvpx with-opencore-amr with-openjpeg with-openssl with-opus with-rtmpdump with-schroedinger with-speex with-theora with-tools with-x265]
+
+system "brew pull 'https://github.com/Homebrew/homebrew/pull/25953'"
+brew "pdftk"
+brew "poppler"
+brew "sam2p"
 
 cask "cyberduck"
 cask "omnigraffle"
