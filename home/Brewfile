@@ -38,7 +38,7 @@ cask "airdisplay"
 cask "gpgtools"
 cask "dterm"
 cask "xquartz"
-cask "d-term"
+cask "dterm"
 
 # Utilities
 
