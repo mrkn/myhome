@@ -1,3 +1,9 @@
+### Network
+
+function intra_ip() {
+  ifconfig | grep 'inet \(10\.\|172\.\(1[6-9]\|2[0-9]\|3[01]\)\.\|192\.168\.\)' | tail -1 | cut -d' ' -f2
+}
+
 ### Prompt
 function is_in_git_repo_p() {
   git ls-files &>/dev/null
