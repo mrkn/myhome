@@ -10,6 +10,9 @@ clang --version >/dev/null 2>&1
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Install brewdler
+brew tap homebrew/brewdler
+
 # Install bootstrap packages
 brew install berkeley-db
 brew install gdbm

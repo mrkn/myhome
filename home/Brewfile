@@ -3,6 +3,7 @@
 tap "'caskroom/homebrew-cask'"
 tap "'homebrew/versions'"
 tap "'homebrew/science'"
+tap "'homebrew/brewdler'"
 tap "'caskroom/versions'"
 tap "'ravenac95/sudolikeaboss'"
 tap "'aereal/homebrew-aereal_casks'"
