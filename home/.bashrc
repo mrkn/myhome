@@ -77,3 +77,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Added by torch-dist
+export PATH=~/torch/install/bin:$PATH
+export LD_LIBRARY_PATH=~/torch/install/lib:$LD_LIBRARY_PATH
