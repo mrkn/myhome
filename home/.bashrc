@@ -85,4 +85,4 @@ export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.0/lib:$DYLD_LIBRARY_PATH
 
 ### Added by torch-dist
 export PATH=~/torch/install/bin:$PATH
-export LD_LIBRARY_PATH=~/torch/install/lib:$LD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=~/torch/install/lib:$DYLD_LIBRARY_PATH
