@@ -84,6 +84,7 @@ brew "erlang", args: %w[devel]
 brew "elixir"
 brew "openblas", args: %w[build-from-source]
 brew "r", args: %w[with-openblas]
+brew "octave", args: %w[with-docs with-openblas]
 brew "postgresql"
 brew "mysql"
 brew "redis"
