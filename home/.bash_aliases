@@ -27,7 +27,19 @@ function vim() {
 alias bi='bundle install'
 alias be='bundle exec'
 
-alias l1='ls -1F'
+case "${OSTYPE}" in
+  darwin*)
+    alias ls='ls -GF'
+    ;;
+  linux*)
+    alias ls='ls --color -F'
+    ;;
+esac
+
+alias l1='ls -1'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ll -a'
 
 alias .ckpd='cd ~/work/ckpd/primary'
 alias .ckpd2='cd ~/work/ckpd/primary'
