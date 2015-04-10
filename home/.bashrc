@@ -69,6 +69,24 @@ if [[ -n "$PS1" ]]; then
   }
 fi
 
+### LESS and LV
+
+export LV='-c'
+export LESS='-R'
+
+if test -x $(which src-hilite-lesspipe.sh); then
+  alias hl=src-hilite-lesspipe.sh
+  export LESSOPEN="| src-hilite-lesspipe.sh %s"
+else
+  alias hl=cat
+fi
+
+function lvs() {
+  local file="$1"
+  shift
+  hl "$file" | lv "$@"
+}
+
 ### Aliases
 source $HOME/.bash_aliases
 
