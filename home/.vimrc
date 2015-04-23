@@ -73,6 +73,8 @@ NeoBundle 'info.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 
+NeoBundle 'JuliaLang/julia-vim'
+
 filetype on
 syntax on
 
