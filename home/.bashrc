@@ -87,6 +87,12 @@ function lvs() {
   hl "$file" | lv "$@"
 }
 
+### Direnv
+
+if test -x $(which direnv); then
+  eval "$(direnv hook bash)"
+fi
+
 ### Aliases
 source $HOME/.bash_aliases
 
