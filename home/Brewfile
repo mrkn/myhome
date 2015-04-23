@@ -25,6 +25,7 @@ brew "tmux"
 brew "reattach-to-user-namespace"
 brew "xz"
 brew "sudolikeaboss"
+brew "direnv"
 
 cask "keyremap4macbook"
 cask "aquaskk"
