@@ -27,6 +27,8 @@
 	sb = status -sb
 	st = stash
 	sh = !bash -l
+[github]
+	user = mrkn
 [github "github.cookpad.com"]
 	user = kenta-murata
 [push]
