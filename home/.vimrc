@@ -143,6 +143,9 @@ set undodir+=.
 "" key bindings {{{
 nnoremap <silent> <Space>p  "+p
 nnoremap <silent> <Space>y  "+y
+nnoremap <silent> <Space>QQ  :qa!<CR>
+nnoremap <silent> <Space>qa  :qa<CR>
+nnoremap <silent> <Space>wq  :wq<CR>
 "" }}}
 
 "" netrw {{{
