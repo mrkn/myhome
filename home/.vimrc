@@ -75,6 +75,8 @@ NeoBundle 'gregsexton/gitv'
 
 NeoBundle 'JuliaLang/julia-vim'
 
+NeoBundle 'derekwyatt/vim-scala'
+
 filetype on
 syntax on
 
