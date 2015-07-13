@@ -29,7 +29,7 @@ function rgb__() {
   echo -n $((16 + $r * 36 + $g * 6 + $b))
 }
 
-PROMPT_COMMAND='last_exit_status=$?'
+PROMPT_COMMAND='history -a; last_exit_status=$?'
 
 function build_primary_prompt() {
   case $TERM in
