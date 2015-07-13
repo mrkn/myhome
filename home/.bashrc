@@ -19,10 +19,6 @@ function git_current_branch() {
   echo ${ref#refs/heads/}
 }
 
-function pre_prompt_hook() {
-  :
-}
-
 function rgb__() {
   local r=$1
   local g=$2
@@ -31,6 +27,9 @@ function rgb__() {
 }
 
 function set_prompt() {
+  # store last command into history
+  history -a
+
   case $TERM in
   *256color)
     local attr_reset='\[\e[0m\]'
@@ -46,13 +45,37 @@ function set_prompt() {
   esac
 
   PS1=""
-  PS1+="${attr_reset}\$(pre_prompt_hook)${attr_reset}${attr_bold}${fg_color_gray241}\\u@\\h:\\w${attr_reset}"
-  PS1+="\$(is_in_git_repo_p && echo -n \ [GIT BRANCH:'${fg_color_r3g3b0}'\$(git_current_branch)'${attr_reset}'])"
-  PS1+=" (\$(if [[ \$last_exit_status -gt 128 ]]; then echo SIGNAL \$((\$last_exit_status - 128)); else echo \$last_exit_status; fi))"
-  PS1+="\\n${attr_bold}\$(if [[ \$last_exit_status = 0 ]]; then echo '${fg_color_r0g3b0}'; else echo '${fg_color_red}'; fi)\$${attr_reset} "
+
+  # timestamp
+  local cols=$(tput cols)
+  local separator=$(eval "printf -- -%.0s {1..$(($cols - 22))}")
+  PS1+="\n${attr_reset}${fg_color_gray241}[\$(date +'%Y-%m-%d %H:%M:%S')] ${separator}${attr_reset}"
+
+  # username and hostname
+  PS1+="\n${attr_reset}${attr_bold}${fg_color_gray241}\\u@\\h:\\w${attr_reset}"
+
+  # git repository information
+  is_in_git_repo_p && \
+    PS1+=" [GIT BRANCH:${fg_color_r3g3b0}$(git_current_branch)${attr_reset}]"
+
+  # previous process status
+  if [[ $last_exit_status -gt 128 ]]; then
+    PS1+=" (SIGNAL $(($last_exit_status - 128)))"
+  else
+    PS1+=" ($last_exit_status)"
+  fi
+
+  # colored prompt mark
+  local prompt_color
+  if [[ $last_exit_status == 0 ]]; then
+    prompt_color=${fg_color_r0g3b0}
+  else
+    prompt_color=${fg_color_red}
+  fi
+  PS1+="\\n${attr_bold}${prompt_color}\$${attr_reset} "
 }
 
-PROMPT_COMMAND='history -a; last_exit_status=$?; set_prompt'
+PROMPT_COMMAND='set_prompt'
 
 ### Absolute path cd command in history
 ### See http://inaz2.hatenablog.com/entry/2014/12/11/015125
@@ -90,6 +113,9 @@ function lvs() {
 if test -x $(which direnv); then
   eval "$(direnv hook bash)"
 fi
+
+# hack for direnv bug
+PROMPT_COMMAND="last_exit_status=\$?; $PROMPT_COMMAND"
 
 ### Aliases
 source $HOME/.bash_aliases
