@@ -10,12 +10,13 @@ function is_in_git_repo_p() {
 }
 
 function git_current_branch() {
-  if is_in_git_repo_p; then
-    local git_status="$(git status -bs | head -1)"
-    echo ${git_status:3}
-  else
-    return 1
+  local ref=$(git symbolic-ref --quiet HEAD 2> /dev/null)
+  local ret=$?
+  if [[ $ret != 0 ]]; then
+    [[ $ret == 128 ]] && return  # no git repo.
+    ref=$(git rev-parse --short HEAD 2> /dev/null) || return
   fi
+  echo ${ref#refs/heads/}
 }
 
 function pre_prompt_hook() {
