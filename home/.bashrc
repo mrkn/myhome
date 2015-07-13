@@ -45,8 +45,6 @@ function set_prompt() {
     ;;
   esac
 
-  local prompt_git_current_branch
-
   PS1=""
   PS1+="${attr_reset}\$(pre_prompt_hook)${attr_reset}${attr_bold}${fg_color_gray241}\\u@\\h:\\w${attr_reset}"
   PS1+="\$(is_in_git_repo_p && echo -n \ [GIT BRANCH:'${fg_color_r3g3b0}'\$(git_current_branch)'${attr_reset}'])"
