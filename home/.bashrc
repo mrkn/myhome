@@ -30,9 +30,7 @@ function rgb__() {
   echo -n $((16 + $r * 36 + $g * 6 + $b))
 }
 
-PROMPT_COMMAND='history -a; last_exit_status=$?'
-
-function build_primary_prompt() {
+function set_prompt() {
   case $TERM in
   *256color)
     local attr_reset='\[\e[0m\]'
@@ -49,13 +47,14 @@ function build_primary_prompt() {
 
   local prompt_git_current_branch
 
-  echo -n "${attr_reset}\$(pre_prompt_hook)${attr_reset}${attr_bold}${fg_color_gray241}\\u@\\h:\\w${attr_reset}"
-  echo -n "\$(is_in_git_repo_p && echo -n \ [GIT BRANCH:'${fg_color_r3g3b0}'\$(git_current_branch)'${attr_reset}'])"
-  echo -n " (\$(if [[ \$last_exit_status -gt 128 ]]; then echo SIGNAL \$((\$last_exit_status - 128)); else echo \$last_exit_status; fi))"
-  echo -n "\\n${attr_bold}\$(if [[ \$last_exit_status = 0 ]]; then echo '${fg_color_r0g3b0}'; else echo '${fg_color_red}'; fi)\$${attr_reset} "
+  PS1=""
+  PS1+="${attr_reset}\$(pre_prompt_hook)${attr_reset}${attr_bold}${fg_color_gray241}\\u@\\h:\\w${attr_reset}"
+  PS1+="\$(is_in_git_repo_p && echo -n \ [GIT BRANCH:'${fg_color_r3g3b0}'\$(git_current_branch)'${attr_reset}'])"
+  PS1+=" (\$(if [[ \$last_exit_status -gt 128 ]]; then echo SIGNAL \$((\$last_exit_status - 128)); else echo \$last_exit_status; fi))"
+  PS1+="\\n${attr_bold}\$(if [[ \$last_exit_status = 0 ]]; then echo '${fg_color_r0g3b0}'; else echo '${fg_color_red}'; fi)\$${attr_reset} "
 }
 
-export PS1="$(build_primary_prompt)"
+PROMPT_COMMAND='history -a; last_exit_status=$?; set_prompt'
 
 ### Absolute path cd command in history
 ### See http://inaz2.hatenablog.com/entry/2014/12/11/015125
