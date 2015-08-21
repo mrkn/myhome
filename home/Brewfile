@@ -91,7 +91,7 @@ brew "mysql"
 brew "redis"
 brew "mecab"
 brew "pyenv"
-brew "pyenv-pip-rehash"
+brew "homebrew/boneyard/pyenv-pip-rehash"
 brew "plenv"
 brew "perl-build"
 
