@@ -77,6 +77,8 @@ NeoBundle 'JuliaLang/julia-vim'
 
 NeoBundle 'derekwyatt/vim-scala'
 
+NeoBundle 'wakatime/vim-wakatime'
+
 filetype on
 syntax on
 
