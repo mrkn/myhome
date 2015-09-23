@@ -12,7 +12,7 @@ tap "'mrkn/mrkn_casks'"
 # Basic packages
 
 brew "brew-cask"
-brew "gcc", args: %w[with-all-languages]
+brew "gcc", args: %w[with-all-languages with-jit]
 brew "lv"
 brew "ag"
 brew "git"
