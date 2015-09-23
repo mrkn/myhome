@@ -3,8 +3,8 @@ set imdisable
 
 if has("gui_running")
   if has("gui_macvim")
-    set guifont=Ricty:h14,Menlo:h12,Osaka-Mono:h14
-    set linespace=1
+    set guifont=Ricty:h18,Menlo:h16
+    set linespace=6
   endif
 endif
 
