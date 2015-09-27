@@ -15,3 +15,7 @@ if [ -d "${PYENV_ROOT}" ]; then
   export PATH=${PYENV_ROOT}/bin:$PATH
   eval "$(pyenv init -)"
 fi
+
+# plenv
+export PATH="$HOME/.plenv/bin:$PATH"
+eval "$(plenv init -)"

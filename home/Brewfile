@@ -92,6 +92,8 @@ brew "redis"
 brew "mecab"
 brew "pyenv"
 brew "pyenv-pip-rehash"
+brew "plenv"
+brew "perl-build"
 
 cask "firefox"
 cask "java"
