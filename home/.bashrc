@@ -128,9 +128,13 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### CUDA Toolkit 7
 
-export PATH=/Developer/NVIDIA/CUDA-7.0/bin:$PATH
-export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.0/lib:$DYLD_LIBRARY_PATH
+if [ -d /Developer/NVIDIA/CUDA-7.5 ]; then
+  export PATH=/Developer/NVIDIA/CUDA-7.5/bin:$PATH
+  export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.5/lib:$DYLD_LIBRARY_PATH
+fi
 
 ### Added by torch-dist
-export PATH=~/torch/install/bin:$PATH
-export DYLD_LIBRARY_PATH=~/torch/install/lib:$DYLD_LIBRARY_PATH
+if [ -d ~/torch/install ]; then
+  export PATH=~/torch/install/bin:$PATH
+  export DYLD_LIBRARY_PATH=~/torch/install/lib:$DYLD_LIBRARY_PATH
+fi
