@@ -4,6 +4,11 @@
   source /etc/profile
 }
 
+# Docker Toolbox
+if which docker-machine >/dev/null; then
+  eval "$(docker-machine env default)"
+fi
+
 # rbenv
 [ -f ~/.bashrc ] && source ~/.bashrc
 export PATH=~/.rbenv/bin:~/bin:$PATH
