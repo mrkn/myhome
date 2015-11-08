@@ -4,13 +4,20 @@
   source /etc/profile
 }
 
+# Read ~/.bashrc
+[ -f ~/.bashrc ] && source ~/.bashrc
+
+# homebrew
+if [ -d ~/.brew/bin ]; then
+  export PATH=~/.brew/bin:$PATH
+fi
+
 # Docker Toolbox
 if which docker-machine >/dev/null; then
   eval "$(docker-machine env default)"
 fi
 
 # rbenv
-[ -f ~/.bashrc ] && source ~/.bashrc
 export PATH=~/.rbenv/bin:~/bin:$PATH
 eval "$(rbenv init -)"
 
