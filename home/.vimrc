@@ -73,6 +73,8 @@ NeoBundle 'info.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 
+NeoBundle 'vim-ruby/vim-ruby'
+
 NeoBundle 'JuliaLang/julia-vim'
 
 NeoBundle 'derekwyatt/vim-scala'
