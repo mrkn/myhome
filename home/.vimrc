@@ -38,6 +38,7 @@ NeoBundle 'Shougo/vimshell.vim'
 
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 
 NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'tpope/vim-surround'
