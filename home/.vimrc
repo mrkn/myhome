@@ -118,8 +118,10 @@ set cmdheight=2
 set laststatus=2
 set display=lastline
 
-"set mouse=
-set ttymouse=xterm2
+set mouse=a
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 
 " backup setting
 if !isdirectory($HOME . '/.vim/backup')
