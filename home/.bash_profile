@@ -31,3 +31,8 @@ fi
 # plenv
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
+
+# embulk
+if [ -d ~/.embulk/bin ]; then
+  export PATH="$HOME/.embulk/bin:$PATH"
+fi
