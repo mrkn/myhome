@@ -47,7 +47,7 @@ cask "dterm"
 # Utilities
 
 brew "peco"
-brew "imagemagick"
+brew "imagemagick", args: %[with-little-cms2 with-jp2 with-webp]
 brew "elasticsearch"
 brew "libdvdcss"
 brew "ffmpeg", args: %w[with-freetype with-libass with-libbluray with-libcaca with-libquvi with-libvidstab with-libvo-aacenc with-libvorbis with-libvpx with-opencore-amr with-openjpeg with-openssl with-opus with-rtmpdump with-schroedinger with-speex with-theora with-tools with-x265]
