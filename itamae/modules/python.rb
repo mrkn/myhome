@@ -6,7 +6,7 @@ python_versions = %w[
 python_global_version = '3.5.0'
 
 package 'pyenv'
-package 'homebrew/boneyard/pyenv-pip-rehash'
+package 'pyenv-virtualenv'
 
 [*python_versions, python_global_version].uniq.each do |version|
   execute "pyenv install #{version}" do
