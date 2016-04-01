@@ -8,8 +8,9 @@
 [ -f ~/.bashrc ] && source ~/.bashrc
 
 # homebrew
-if [ -d ~/.brew/bin ]; then
-  export PATH=~/.brew/bin:$PATH
+HOMEBREW_PREFIX=/opt/brew
+if [ -d $HOMEBREW_PREFIX/bin ]; then
+  export PATH=$HOMEBREW_PREFIX/bin:$PATH
 fi
 
 # Docker Toolbox
