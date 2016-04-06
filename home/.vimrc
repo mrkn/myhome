@@ -44,7 +44,7 @@ NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'motemen/git-vim'
 " NeoBundle 'mileszs/ack.vim'
-NeoBundle 'rking/ag.vim'
+" NeoBundle 'rking/ag.vim'
 NeoBundle 'thinca/vim-quickrun'
 
 NeoBundle 'Shougo/unite.vim'
@@ -256,13 +256,6 @@ nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W
 " recall the result the last grep
 nnoremap <silent> ,r :<C-u>UniteResume search-buffer<CR>
 
-" use ag for grep
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-endif
-
 nnoremap [unite] <Nop>
 nmap <Leader>f [unite]
 
@@ -295,14 +288,29 @@ let g:netrw_http_xcmd = "-x socks5h://localhost:23921 -o"
 nnoremap <silent> <Leader>m :OverCommandLine<CR>
 "" }}}
 
-"" ag {{{
-if executable("ag")
+"" grep {{{
+if executable("hw")
+  " Use hw over grep
+  set grepprg=hw\ --no-group\ --no-color
+  " Use hw in Ctrl-p for listing files.  Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'hw %s -l --no-color'
+  " hw is fast enough that Ctrl-p doesn't need to cache
+  let g:ctrlp_use_caching = 0
+  " Use hw for Unite grep
+  let g:unite_source_grep_command = 'hw'
+  let g:unite_source_grep_default_opts = '--no-group --no-color'
+  let g:unite_source_grep_recursive_opt = ''
+elseif executable("ag")
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
   " Use ag in Ctrl-p for listing files.  Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   " ag is fast enough that Ctrl-p doesn't need to cache
   let g:ctrlp_use_caching = 0
+  " Use ag for Unite grep
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
 endif
 "" }}}
 
