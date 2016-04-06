@@ -33,7 +33,7 @@ execute "Uninstall existing #{app_name}" do
   only_if "#{need_to_install} && test -d #{app_path} -o -L #{app_path}"
 end
 
-execute "Install iTerm 2" do
+execute "Install #{app_name}" do
   command "unzip -x -d #{app_path.parent} #{File.basename(url)}"
   cwd tmpdir
   only_if "#{need_to_install} && test -f #{File.basename(url)}"
