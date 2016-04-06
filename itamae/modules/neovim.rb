@@ -1,1 +1,3 @@
-package "neovim/neovim/neovim"
+package 'neovim/neovim/neovim' do
+  options '--env=std'
+end
