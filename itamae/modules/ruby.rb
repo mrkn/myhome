@@ -39,6 +39,6 @@ end
 end
 
 execute "rbenv global #{ruby_global_version}" do
-  command %[exec "$(rbenv init -)"; rbenv global '#{ruby_global_version}']
-  not_if  %[exec "$(rbenv init -)"; rbenv versions | grep '* #{ruby_global_version}']
+  command %[eval "$(rbenv init -)"; rbenv global '#{ruby_global_version}']
+  not_if  %[eval "$(rbenv init -)"; rbenv versions | grep '* #{ruby_global_version}']
 end
