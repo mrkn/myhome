@@ -2,17 +2,37 @@ GEM
   remote: https://rubygems.org/
   specs:
     ansi (1.5.0)
+    domain_name (0.5.20160310)
+      unf (>= 0.0.5, < 1.0.0)
     hashie (3.4.3)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     itamae (1.9.6)
       ansi
       hashie
       schash (~> 0.1.0)
       specinfra (>= 2.37.0, < 3.0.0)
       thor
+    mechanize (2.7.4)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (>= 1.17.2, < 3)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.6)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
+    mime-types (2.99.1)
+    mini_portile2 (2.0.0)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.1.1)
     net-telnet (0.1.1)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+    ntlm-http (0.1.1)
     schash (0.1.2)
     sfl (2.2)
     specinfra (2.56.1)
@@ -21,12 +41,17 @@ GEM
       net-telnet
       sfl
     thor (0.19.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
+    webrobots (0.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   itamae
+  mechanize
 
 BUNDLED WITH
    1.11.2

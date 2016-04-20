@@ -1,11 +1,22 @@
 require 'fileutils'
 require 'pathname'
 require 'tmpdir'
+require 'mechanize'
 
 app_name = 'astah professional'
 version = '7.0.0'
 sha256 = 'f9077dfe61f7ccf378c68031f9d888f2c5d349a83aeb34c9517cc046baca953e'
-url = "http://members.change-vision.com/files/_nPtmcdYCoVyaTyqExWSZIw8YGIJGgwt6/astah_professional/7_0_0/astah-professional-7_0_0-846701-MacOs.dmg"
+
+url = -> {
+  mechanize = Mechanize.new do |agent|
+    agent.user_agent_alias = 'Mac Safari'
+  end
+  mechanize.get("http://members.change-vision.com/files/astah_professional/#{version.tr('.', '_')}") do |page|
+    page = mechanize.click(page.link_with(href: /MacOs\.dmg/))
+    href = page.link_with(href: /MacOs\.dmg/).href
+    return mechanize.agent.resolve(href, page).to_s
+  end
+}.()
 
 pkg_file = 'astah professional ver 7_0_0.pkg'
 
