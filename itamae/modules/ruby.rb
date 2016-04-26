@@ -5,22 +5,16 @@ include_recipe 'libyaml'
 include_recipe 'openssl'
 include_recipe 'qdbm'
 include_recipe 'readline'
+include_recipe 'rbenv'
 
 ruby_versions = %w[
   2.1.10
-  2.2.4
-  2.3.0
+  2.2.5
+  2.3.1
   2.4.0-dev
 ]
 
-ruby_global_version = '2.3.0'
-
-package 'rbenv'
-package 'rbenv-aliases'
-
-package 'ruby-build' do
-  options '--HEAD'
-end
+ruby_global_version = '2.3.1'
 
 brew_prefix = `brew --prefix`.chomp
 gdbm_dir = `brew --prefix gdbm`.chomp
