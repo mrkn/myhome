@@ -1,9 +1,9 @@
 python_versions = %w[
-  2.7.10
-  3.5.0
+  2.7.11
+  3.5.1
 ]
 
-python_global_version = '3.5.0'
+python_global_version = '3.5.1'
 
 package 'pyenv'
 package 'pyenv-virtualenv'
