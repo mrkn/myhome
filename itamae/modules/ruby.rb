@@ -48,7 +48,7 @@ configure_opts = [
         RBENV_VERSION='#{version}' gem install bundler itamae
     CMD
 
-    not_if <<-CMD
+    not_if <<-CMD unless version.end_with?('-dev')
       eval "$(rbenv init -)";
       rbenv versions | grep '#{version}'
     CMD

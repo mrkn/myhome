@@ -7,7 +7,7 @@ package 'rbenv-aliases'
 execute 'brew upgrade --cleanup rbenv-aliases || :'
 
 execute 'brew uninstall ruby-build' do
-  only_if 'brew --prefix ruby-build'
+  only_if 'brew list | grep -q ruby-build 2>/dev/null'
 end
 
 execute 'git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build' do
