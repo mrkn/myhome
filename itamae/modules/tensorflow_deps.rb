@@ -10,10 +10,10 @@ execute "pip install -U numpy" do
   command %[eval "$(pyenv init -)"; pyenv exec pip install -U numpy]
 end
 
-execute "pip install -U wheel" do
-  command %[eval "$(pyenv init -)"; pyenv exec pip install -U numpy]
+execute "pip install wheel" do
+  command %[eval "$(pyenv init -)"; pyenv exec pip install wheel]
 end
 
 execute "pip install jupyter" do
-  command %[eval "$(pyenv init -)"; pyenv exec pip install -U numpy]
+  command %[eval "$(pyenv init -)"; pyenv exec pip install -U jupyter]
 end
