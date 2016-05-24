@@ -1,3 +1,7 @@
+### Locale
+
+export LANG=en_US.UTF-8
+
 ### Network
 
 function intra_ip() {
