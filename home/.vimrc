@@ -75,6 +75,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'keith/rspec.vim'
 
 NeoBundle 'JuliaLang/julia-vim'
 
