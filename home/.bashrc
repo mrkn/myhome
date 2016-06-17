@@ -114,9 +114,7 @@ function lvs() {
 
 ### Direnv
 
-if test -x $(which direnv); then
-  eval "$(direnv hook bash)"
-fi
+which direnv &>/dev/null && eval "$(direnv hook bash)"
 
 # hack for direnv bug
 PROMPT_COMMAND="last_exit_status=\$?; $PROMPT_COMMAND"

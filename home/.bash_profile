@@ -15,6 +15,11 @@ fi
 
 # Docker Toolbox
 if which docker-machine >/dev/null; then
+  case $(docker-machine status default) in
+    Stopped)
+      docker-machine start default
+      ;;
+  esac
   eval "$(docker-machine env default)"
 fi
 
@@ -31,7 +36,7 @@ fi
 
 # plenv
 export PATH="$HOME/.plenv/bin:$PATH"
-eval "$(plenv init -)"
+which plenv &>/dev/null && eval "$(plenv init -)"
 
 # embulk
 if [ -d ~/.embulk/bin ]; then
