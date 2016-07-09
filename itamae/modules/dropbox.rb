@@ -38,13 +38,13 @@ end
 
 execute "Install #{app_name}" do
   command <<-CMD
-    hdiutil attach #{download_filename} -readonly -mountpoint #{mountpoint} &&
-      open -W #{mountpoint.join(app_path.basename)};
+    hdiutil attach '#{download_filename}' -readonly -mountpoint '#{mountpoint}' &&
+      open -W '#{mountpoint.join(app_path.basename)}';
     exitcode=$?;
-    hdiutil detach #{mountpoint} || :;
+    hdiutil detach '#{mountpoint}' || :;
     exit $exitcode
   CMD
 
   cwd tmpdir
-  only_if "#{need_to_install} && test -f #{download_filename}"
+  only_if "#{need_to_install} && test -f '#{download_filename}'"
 end

@@ -6,6 +6,7 @@ app_name = 'ShowyEdge'
 version = '3.0.0'
 sha256 = '4a6b16970cb77a9b3e77031e74cf8907a09106ffff1e430eec9c41790579008c'
 url = "https://pqrs.org/osx/ShowyEdge/files/ShowyEdge-#{version}.dmg"
+download_filename = File.basename(url)
 
 app_path = Pathname("/Applications/#{app_name}.app")
 info_plist = app_path.join("Contents/Info.plist")
@@ -25,7 +26,7 @@ mountpoint = Pathname(tmpdir).join('vol')
 mountpoint.mkpath
 
 execute "Download #{app_name}" do
-  command "curl -L -O #{url}"
+  command "curl -L -o '#{download_filename}' '#{url}'"
   cwd tmpdir
   only_if "#{need_to_install}"
 end
@@ -37,13 +38,13 @@ end
 
 execute "Install #{app_name}" do
   command <<-CMD
-    hdiutil attach #{File.basename(url)} -readonly -mountpoint #{mountpoint} &&
-      cp -r #{mountpoint.join(app_path.basename)} #{app_path.parent};
+    hdiutil attach '#{download_filename}' -readonly -mountpoint '#{mountpoint}' &&
+      cp -r '#{mountpoint.join(app_path.basename)}' '#{app_path.parent}';
     exitcode=$?;
-    hdiutil detach #{mountpoint} || :;
+    hdiutil detach '#{mountpoint}' || :;
     exit $exitcode
   CMD
 
   cwd tmpdir
-  only_if "#{need_to_install} && test -f #{File.basename(url)}"
+  only_if "#{need_to_install} && test -f '#{download_filename}'"
 end
