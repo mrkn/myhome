@@ -82,6 +82,8 @@ NeoBundle 'JuliaLang/julia-vim'
 
 NeoBundle 'derekwyatt/vim-scala'
 
+NeoBundle 'hashivim/vim-terraform'
+
 NeoBundle 'wakatime/vim-wakatime'
 
 call neobundle#end()
