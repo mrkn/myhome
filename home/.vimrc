@@ -171,6 +171,20 @@ let g:netrw_liststyle=3
 let g:deoplete#enable_at_startup = 1
 "" }}}
 
+"" title {{{
+set title
+set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)
+
+if $TMUX != ""
+  augroup tmuxSetTitle
+    autocmd!
+    autocmd BufEnter * call system("tmux rename-window " . "'[vim] " . expand("%:t") . "'")
+    autocmd VimLeave * call system("tmux rename-window 'shell'")
+    autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
+  augroup END
+endif
+"" }}}
+
 augroup ruby
   autocmd!
 augroup END
