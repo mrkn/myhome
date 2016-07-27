@@ -176,12 +176,21 @@ set title
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)
 
 if $TMUX != ""
+  function! s:SetTmuxTitle()
+    call system("tmux rename-window " . "'[vim] " . expand("%:t") . "'")
+  endfunction
+
+  function! s:SetTmuxTitleToShell()
+    call system("tmux rename-window 'shell'")
+  endfunction
+
   augroup tmuxSetTitle
     autocmd!
-    autocmd BufEnter * call system("tmux rename-window " . "'[vim] " . expand("%:t") . "'")
-    autocmd VimLeave * call system("tmux rename-window 'shell'")
+    autocmd BufEnter * call s:SetTmuxTitle()
+    autocmd VimLeave * call s:SetTmuxTitleToShell()
     autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
   augroup END
+  nnoremap <silent> <C-z> :call <SID>SetTmuxTitleToShell()<CR>:suspend<bar>:call <SID>SetTmuxTitle()<CR>
 endif
 "" }}}
 
