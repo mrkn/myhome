@@ -10,8 +10,12 @@ package 'pyenv-virtualenv'
 
 [*python_versions, python_global_version].uniq.each do |version|
   execute "pyenv install #{version}" do
-    command %[eval "$(pyenv init -)"; pyenv install #{version} && PYENV_VERSION=#{version} pip install --upgrade pip]
+    command %[eval "$(pyenv init -)"; PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install #{version}]
     not_if  %[eval "$(pyenv init -)"; pyenv versions | grep #{version}]
+  end
+
+  execute "python -m pip install --upgrade pip" do
+    command %[PYENV_VERSION=#{version} python -m pip install --upgrade pip]
   end
 end
 
