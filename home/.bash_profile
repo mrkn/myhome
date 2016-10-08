@@ -16,6 +16,11 @@ fi
 # pkg-config
 export PKG_CONFIG_PATH=$(brew --prefix)/lib/pkgconfig:/usr/lib/pkgconfig
 
+# libffi on homebrew
+if brew --prefix libffi >&/dev/null; then
+  export PKG_CONFIG_PATH=$(brew --prefix libffi)/lib/pkgconfig:$PKG_CONFIG_PATH
+fi
+
 # Docker Toolbox
 if which docker-machine >/dev/null; then
   case $(docker-machine status default) in
