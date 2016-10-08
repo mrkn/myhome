@@ -13,6 +13,9 @@ if [ -d $HOMEBREW_PREFIX/bin ]; then
   export PATH=$HOMEBREW_PREFIX/bin:$PATH
 fi
 
+# pkg-config
+export PKG_CONFIG_PATH=$(brew --prefix)/lib/pkgconfig:/usr/lib/pkgconfig
+
 # Docker Toolbox
 if which docker-machine >/dev/null; then
   case $(docker-machine status default) in
