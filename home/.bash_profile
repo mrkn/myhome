@@ -46,6 +46,11 @@ fi
 export PATH="$HOME/.plenv/bin:$PATH"
 which plenv &>/dev/null && eval "$(plenv init -)"
 
+# julia
+if [ -d /Applications/Julia-0.5.app/Contents/Resources/julia/bin ]; then
+  export PATH="/Applications/Julia-0.5.app/Contents/Resources/julia/bin":$PATH
+fi
+
 # embulk
 if [ -d ~/.embulk/bin ]; then
   export PATH="$HOME/.embulk/bin:$PATH"
