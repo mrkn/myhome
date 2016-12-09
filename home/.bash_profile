@@ -21,16 +21,6 @@ if brew --prefix libffi >&/dev/null; then
   export PKG_CONFIG_PATH=$(brew --prefix libffi)/lib/pkgconfig:$PKG_CONFIG_PATH
 fi
 
-# Docker Toolbox
-if which docker-machine >/dev/null; then
-  case $(docker-machine status default) in
-    Stopped)
-      docker-machine start default
-      ;;
-  esac
-  eval "$(docker-machine env default)"
-fi
-
 # rbenv
 export PATH=~/.rbenv/bin:~/bin:$PATH
 eval "$(rbenv init -)"
