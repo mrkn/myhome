@@ -21,10 +21,10 @@ end
 
 app_name = 'MacTeX'
 release_year = 2016
-sha256 = '34e5c48846a674e0025e92bf1ab7bb43a1108f729b4c26c61edcda24fa5383e3'
+sha256 = 'b44873d445881900401d0e0eddccc78140b9ed51b538364889eb8529350d5bd7'
 url = 'http://tug.org/cgi-bin/mactex-download/MacTeX.pkg'
 
-download_filename = 'mactex-20160603.pkg'
+download_filename = 'mactex-20161009.pkg'
 pkg_file = download_filename
 texlive_root = Pathname("/usr/local/texlive/#{release_year}")
 
